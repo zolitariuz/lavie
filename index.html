@@ -32,7 +32,7 @@
 						</a>
 					</h1>
 
-					<nav class="columna xmall-5 right">
+					<nav class="columna xmall-6 right">
 						<a class="block text-center" href="noticias.html">Noticias</a>
 						<a class="block text-center" href="dietas.html">Dietas</a>
 						<a class="block text-center" href="rutinas.html">Rutinas</a>
@@ -49,10 +49,10 @@
 
 				<section class="intro">
 
-					<div class="width">
+					<div class="width clearfix">
 
 						<div class="columna xmall-8 hero">
-							<p>Dolor sit amet et elit <span>Consectur</span>.</p>
+							<p>Dolor sit amet et elit <span>Consectur.</span></p>
 						</div>
 
 						<div class="clear"></div>
@@ -69,10 +69,6 @@
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 						</div>
 
-						<div class="columna xmall-4">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. vestibulum. </p>
-						</div>
-
 					</div><!-- width -->
 
 				</section><!-- intro -->
@@ -86,12 +82,18 @@
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed mattis lacus. Nam faucibus fringilla enim, ullamcorper elit molestie a.</p>
 						</div><!-- xmall-5 -->
 
-						<div class="slider columna xmall-7">
+						<div class="slider columna xmall-7 cycle-slideshow"
+							data-cycle-fx="scrollHorz"
+							data-cycle-swipe="true"
+						>
+
 							<img src="images/slider.jpg" alt="">
 							<img src="images/slider.jpg" alt="">
 						</div>
 
-						<hr class="clear">
+						<div class="clear"></div>
+
+						<hr class="clear columna xmall-8 center">
 
 						<div class="clearfix">
 
@@ -105,23 +107,37 @@
 							</div> -->
 
 							<div class="span xmall-4 post">
-								<h3>Noticias</h3>
-								<div class="overlay"></div>
-								<img src="images/noticia.png" alt="">
-								<div class="info">
-									<p><span>Lorem ipsum dolor sit amet</span>, consectetur adipiscing elit. Vestibulum sed mattis lacus.</p>
-									<a href="#" class="boton">Click y conoce más</a>
-								</div><!-- info -->
+								<a href="#">
+									<h3>Noticias</h3>
+									<div class="overlay"></div>
+									<img src="images/noticia.png" alt="">
+									<div class="info">
+										<p><em>Lorem ipsum dolor sit amet</em>, consectetur adipiscing elit. Vestibulum sed mattis lacus.</p>
+										<a href="#" class="boton">Click y conoce más</a>
+									</div><!-- info -->
+								</a>
 							</div>
 							<div class="span xmall-4 post">
-								<h3>Dietas</h3>
-								<div class="overlay"></div>
-								<img src="images/noticia.png" alt="">
+								<a href="#">
+									<h3>Dietas</h3>
+									<div class="overlay"></div>
+									<img src="images/noticia.png" alt="">
+									<div class="info">
+										<p><span>Lorem ipsum dolor sit amet</span>, consectetur adipiscing elit. Vestibulum sed mattis lacus.</p>
+										<a href="#" class="boton">Click y conoce más</a>
+									</div><!-- info -->
+								</a>
 							</div>
 							<div class="span xmall-4 post">
-								<h3>Rutinas</h3>
-								<div class="overlay"></div>
-								<img src="images/noticia.png" alt="">
+								<a href="#">
+									<h3>Rutinas</h3>
+									<div class="overlay"></div>
+									<img src="images/noticia.png" alt="">
+									<div class="info">
+										<p><span>Lorem ipsum dolor sit amet</span>, consectetur adipiscing elit. Vestibulum sed mattis lacus.</p>
+										<a href="#" class="boton">Click y conoce más</a>
+									</div><!-- info -->
+								</a>
 							</div>
 
 						</div><!-- -->
@@ -129,10 +145,7 @@
 
 				</section>
 
-
-
 			</div><!-- main -->
-
 
 		</div><!-- container -->
 
@@ -141,6 +154,10 @@
 		</footer>
 
 	</body>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
+	<script src="js/functions.js"></script>
 
 </html>
 

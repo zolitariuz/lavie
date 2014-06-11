@@ -140,6 +140,12 @@ figure {margin: 0;}
   background-clip:         padding-box;
 }
 
+.box-shadow (@string) {
+	-webkit-box-shadow: @string;
+	-moz-box-shadow:    @string;
+	box-shadow:         @string;
+}
+
 .transition (@transition: all 0.3s ease ) {
   -webkit-transition: @transition;
   -moz-transition:    @transition;
@@ -284,8 +290,36 @@ body{ background: #fff; .font; }
 // .inclinado{ width:300px; height:450px; margin-top:-70px; margin-right:100px; overflow:hidden; background:#aaa; float:right; border:3px solid #fff; .rotate(20deg); }
 // .desinclinado{ width:500px; height:320px; margin-top:60px; margin-left:-80px; overflow:hidden; background:#f1f1f1; .rotate(-20deg); }
 
+hr{ border: none; height: 1px; background: @claro; }
+
+p{ .font(1.2em, 1.4em); }
+
+.boton{ padding: (@margen/2); .border-radius(4px); background: @highlight; color: @claro; text-align: center; }
+
 h1{ margin: 0;
-	img{ -webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222); }
+	img{ -webkit-filter: drop-shadow(4px 4px 5px #888); filter: drop-shadow(4px 4px 5px #888); }
+}
+h2{ margin: 0 0 @margen 0; .font(2em, 1em, 'trade-light-oblique'); color: @claro; letter-spacing: 0.1em; }
+h3{ margin: 0; width: 100%; .font(3em, 1em, 'trade-bold-condensed'); text-transform: uppercase; position: absolute; top: 40%; text-align: center; color: @claro; z-index: 2; }
+
+section{ padding-bottom: @margen; }
+
+.post{ position: relative;
+	a{ display: block; width: 100%; height: 100%; }
+	.overlay{ width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: rgba(0,0,0,0.5); z-index: 1; }
+	img{ display: block; }
+	.info{ display: none; padding: @margen; background: @claro;
+		a{ text-decoration: none; }
+		p{ color: @highlight; }
+	}
+
+	&:hover{ z-index: 2; .transition;
+		h3{ top: 28%; }
+		.overlay{ display: none; }
+		img{ .box-shadow( 0px 0px 10px 5px rgba(0,0,0,0.4)); .transition; }
+		.info{ display: block; }
+	}
+
 }
 
 /*** HEADER ***/
@@ -293,17 +327,22 @@ h1{ margin: 0;
 header{ height: 50px; .linear-gradient(  lighten(@obscuro, 20%), @obscuro); }
 
 nav{
-	a{ width: 20%; .font(1.2em, 50px); color: @claro; text-transform: uppercase; text-decoration: none; float: left;
+	a{ width: 20%; padding: 0 1%; .font(1.2em, 50px); color: @claro; text-transform: uppercase; text-decoration: none; float: left;
 		&.hero, &:hover{ .linear-gradient( lighten(@highlight, 30%), @highlight); }
 		&.hero{ width: 40%; }
 	}
 }
 
-/*** INTRO ***/
+/*** HOME ***/
 .intro{
 	.hero{ .font(3em, 2em, 'trade-bold-condensed'); text-transform: uppercase; color: @highlight;
 		span{ .font(4em, 1em, 'trade-bold-condensed'); }
 	}
+}
+
+.secundaria{ padding-top: (@margen*3); background: @highlight; .box-shadow(inset 0px 11px 16px 0px rgba(0,0,0,0.59));
+	p{ color: @claro; }
+	hr{ margin: @margen 0; }
 }
 
 /*** FOOTER ***/
