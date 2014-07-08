@@ -162,7 +162,6 @@ figure {margin: 0;}
 }
 
 .linear-gradient( @start, @end ){
-
 	background: @start; /* Old browsers */
 	background: -moz-linear-gradient(top,  @start 0%, @end 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@start), color-stop(100%,@end));
@@ -171,7 +170,6 @@ figure {margin: 0;}
 	background: -ms-linear-gradient(top,  @start 0%,@end 100%);
 	background: linear-gradient(to bottom,  @start 0%,@end 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@start, endColorstr=@end,GradientType=0 );
-
 }
 
 .drop-shadow(){
@@ -271,6 +269,7 @@ p{ .font(1.2em, 1.4em, 'adelle'); }
 h1{ margin-top: 0; margin-bottom: (@margen*3) !important; }
 h2{ margin: 0 0 @margen 0; .font(3em,1); color: @highlight; }
 h3{ margin: (@margen*3) 0; .font(2.6em,1); color: @claro; }
+h4{ margin: @margen 0; .font(1.1em,1.2em); color: @claro; }
 
 section{ padding-bottom: (@margen*2); }
 
@@ -303,13 +302,29 @@ nav{
 	}
 	h4{ margin: 0; .font(2em, 1, 'ff-enzo-web', 600); background: darken(@highlight, 20%); position: relative; top: -(@margen*2);
 		a{ display: block; width: 100%; height: 100%; padding: (@margen*2) 0; color: @claro; .transition;
-			&:hover{ background: darken(@highlight, 30%) }
+			&:hover{ background: darken(@highlight, 30%); }
 		}
 	}
 	p{ .font(1em, 1.1em, 'adelle'); color: @claro; position: relative; top: -(@margen); }
 }
 
 /*** FOOTER ***/
+
+/*** MODAL ***/
+.modal{ width: 100%; height: 100%; background: rgba(255, 255, 255, 0.5); position: fixed; top: 0; left: 0; .transition; z-index: 9999;
+	.modal-in{ width: 70%; height: 85%; padding: @margen; .center-full; background: @highlight; position: relative; overflow-y: scroll;}
+	.width{ width: 100%; margin: 0; }
+	form{
+		label, input, textarea{ width: 100%; margin: 0 0 @margen 0; }
+		input, textarea{ padding: (@margen/2); border: none; }
+		label{ color: @claro; }
+		input{
+			&[type='text']{}
+			&[type='submit']{ background: darken(@highlight, 10%); color: @claro; }
+		}
+	}
+
+}
 
 /*** MEDIA QUERIES ***/
 
